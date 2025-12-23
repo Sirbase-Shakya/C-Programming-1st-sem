@@ -6,11 +6,11 @@ int main()
     scanf("%d",&n);
     if(n%3==0 && n%5==0)
     {
-        printf("freebuzz");
+        printf("fizzbuzz");
     }
     else if(n%3==0)
     {
-        printf("free");
+        printf("fizz");
     }
     else if(n%5==0)
     {
