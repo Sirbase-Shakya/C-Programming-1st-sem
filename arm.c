@@ -1,31 +1,24 @@
-#include <stdio.h>
+#include<stdio.h>
 #include<math.h>
-int main() {
-    int x,temp,c=0,sum=0;
-    printf("Enter a number");
-    scanf("%d",&x);
-    temp =x;
-    while(temp > 0)
+void main()
+{
+    int n,count = 0,arm = 0,temp;
+    printf("Enter a Number:");
+    scanf("%d",&n);
+    temp = n;
+    while(n>0)
     {
-        c++;
-        temp/=10;
+        count++;
+        n/=10;
     }
-    temp=x;
-    while(temp>0)
+    n = temp;
+    while(n>0)
     {
-        sum+=pow(temp%10,c);
-        temp=temp/10;
+        arm += round(pow(n%10, count));
+        n/=10;
     }
-    if(x ==  sum)
-    {
-        printf("Armstrong");
-        
-    }
+    if(arm == temp)
+        printf("Armstrong Number");
     else
-    {
-        printf("Not Armstrong");
-    }
-    
-
-    return 0;
+        printf("Not an Armstrong Number");
 }
